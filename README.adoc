@@ -1,0 +1,38 @@
+
+= HelloWorld
+:toc:
+
+== Introduction
+A simple Hello World Application based on https://gradle.org/[Gradle] and https://java.com/[Java].
+
+
+== Execution
+
+As the gradle wrapper is included, you can simply run
+
+* on Linux:
+[source, shell]
+----
+$ ./gradlew run
+----
+* on Windows
+[source, shell]
+----
+$ ./gradlew.bat run
+----
+
+The output of the command should be similar to this
+
+[source, shell]
+----
+$ ./gradlew run
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:run
+Hello World
+
+BUILD SUCCESSFUL
+
+Total time: 1.802 secs
+----

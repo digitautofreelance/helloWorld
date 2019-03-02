@@ -1,0 +1,14 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+project.description = 'Hello World'
+project.version = '0.0.1'
+
+mainClassName = 'de.freitag.stefan.helloworld.HelloWorld'
+
+wrapper {
+    gradleVersion = '5.2.1'
+    distributionUrl = distributionUrl.replace("bin", "all")
+}
