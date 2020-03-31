@@ -9,6 +9,6 @@ project.version = '0.0.1'
 mainClassName = 'de.freitag.stefan.helloworld.HelloWorld'
 
 wrapper {
-    gradleVersion = '5.2.1'
+    gradleVersion = '6.3'
     distributionUrl = distributionUrl.replace("bin", "all")
 }
