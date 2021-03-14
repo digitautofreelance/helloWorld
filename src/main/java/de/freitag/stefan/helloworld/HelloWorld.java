@@ -1,5 +1,7 @@
 package de.freitag.stefan.helloworld;
 
+import java.util.function.Consumer;
+
 public final class HelloWorld {
 
     private HelloWorld(){
@@ -12,6 +14,7 @@ public final class HelloWorld {
      * @param args The command line arguments.
      */
     public static void main(final String[] args) {
-        System.out.println("Hello World");
+        Consumer<String> consumer = System.out::println;
+        consumer.accept("Hello World");
     }
 }

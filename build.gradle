@@ -1,14 +1,25 @@
 plugins {
     id 'application'
     id 'java'
+    id "fr.brouillard.oss.gradle.jgitver"  version "0.10.0-rc03"
 }
 
 project.description = 'Hello World'
-project.version = '0.0.1'
 
 mainClassName = 'de.freitag.stefan.helloworld.HelloWorld'
 
 wrapper {
-    gradleVersion = '6.3'
+    gradleVersion = '6.8.3'
     distributionUrl = distributionUrl.replace("bin", "all")
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(15)
+        vendor = JvmVendorSpec.ADOPTOPENJDK
+    }
+}
+
+jgitver {
+    strategy "MAVEN"
 }

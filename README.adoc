@@ -36,3 +36,33 @@ BUILD SUCCESSFUL
 
 Total time: 1.802 secs
 ----
+
+== Building the Docker image
+
+[source, shell]
+----
+
+docker build -t hello-world .
+
+Sending build context to Docker daemon  716.8kB
+Step 1/6 : FROM openjdk:8-jre-slim
+---> 542901077284
+Step 2/6 : ENV APP_HOME=/usr/app/
+---> Using cache
+---> 1bf11b90afa8
+Step 3/6 : WORKDIR $APP_HOME
+---> Using cache
+---> a773b09b59ed
+Step 4/6 : COPY build/libs/*.jar $APP_HOME
+---> 48c1e14493ee
+Step 5/6 : CMD java -jar HelloWorld.jar
+---> Running in 76b97adaab44
+Removing intermediate container 76b97adaab44
+---> 86bb89d23b3a
+Step 6/6 : EXPOSE 80
+---> Running in 108203280d39
+Removing intermediate container 108203280d39
+---> f3c4848f6703
+Successfully built f3c4848f6703
+Successfully tagged hello-world:latest
+----
