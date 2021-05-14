@@ -15,6 +15,6 @@ public final class HelloWorld {
      */
     public static void main(final String[] args) {
         Consumer<String> consumer = System.out::println;
-        consumer.accept("Hello World");
+        consumer.accept("Hello World!");
     }
 }
